@@ -4,7 +4,7 @@ var play = prompt("Hello, welcome to my game! Would you like to play?").toLowerC
 if(play === "yes") {
 	alert("Let's begin, shall we!");
 	alert("You are a caveman during cavemanian days. You are starving and need to find something to eat. Out in the distance you spot a wooly mammoth.");
-	var hunt = prompt("Would you like to try and kill the mammoth?").toLowerCase();
+	var hunt = prompt("Would you like to get a closer look?").toLowerCase();
 	var mamHealth = 100;
 	var userHealth = 100;
 
@@ -58,9 +58,9 @@ function hit() {
 }
 
 function mamAttack() {
-	userHealth -= Math.round(Math.random() * 20);
+	userHealth -= Math.round(Math.random() * 50);
 	if (userHealth <= 0) {
-		alert("The hairy elephant has killed you!")
+		alert("The mammoth has impaled you with his tusk and killed you!")
 	}
 	else {
 		alert("The mammoth has attacked you back! You still have " + userHealth + "% health left!")
