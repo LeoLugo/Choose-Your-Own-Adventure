@@ -52,7 +52,7 @@ function hit() {
 
 	if (pet === 1) {
 		alert("You hear a noise and look to your left. You see a sabertooth tiger attack the mammoth at the same time you throw your spear!")
-		alert("It's the same tiger that you raised from a cub when you found him abandoned. He has come back to help you!")
+		alert("You realize its your friend Battle Cat! He accidently mauled He-Man to death and came to live with you to circumvent justice.")
 		alert("Together you guys destroy the mammoth and feast on his flesh!!!!!")
 		}
 
