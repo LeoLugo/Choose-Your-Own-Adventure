@@ -1,9 +1,10 @@
+
 var play = prompt("Hello, welcome to my game! Would you like to play?").toLowerCase();
 
 
 if(play === "yes") {
 	alert("Let's begin, shall we!");
-	alert("You are a caveman during cavemanian days. You are starving and need to find something to eat. Out in the distance you spot a wooly mammoth.");
+	alert("You are a caveman living during Prehistoric days. You are starving and need to find something to eat. Out in the distance you spot a wooly mammoth.");
 	var hunt = prompt("Would you like to get a closer look?").toLowerCase();
 	var mamHealth = 100;
 	var userHealth = 100;
@@ -46,19 +47,28 @@ function die() {
 }
 
 function hit() {
-	mamHealth -= Math.round(Math.random() * 20);
+	mamHealth -= Math.ceil(Math.random() * 20);
+	var pet = Math.ceil(Math.random() * 8);
 
-	if (mamHealth <= 0) {
-		alert("You have killed the mammoth! You go on to conquer the world!")
-	}
+	if (pet === 1) {
+		alert("You hear a noise and look to your left. You see a sabertooth tiger attack the mammoth at the same time you throw your spear!")
+		alert("It's the same tiger that you raised from a cub when you found him abandoned. He has come back to help you!")
+		alert("Together you guys destroy the mammoth and feast on his flesh!!!!!")
+		}
+
 	else {
-		alert("You have hurt the mammoth but it still has " + mamHealth + "% health left!")
-		mamAttack();
+		if (mamHealth <= 0) {
+			alert("You have killed the mammoth! You go on to conquer the world!")
+		}
+		else {
+			alert("You have hurt the mammoth but it still has " + mamHealth + "% health left!")
+			mamAttack();
+		}
 	}
 }
 
 function mamAttack() {
-	userHealth -= Math.round(Math.random() * 50);
+	userHealth -= Math.ceil(Math.random() * 50);
 	if (userHealth <= 0) {
 		alert("The mammoth has impaled you with his tusk and killed you!")
 	}
